@@ -60,6 +60,7 @@ export function ProjectsSection() {
                   src={project.image}
                   alt={`${project.title} dashboard preview`}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
