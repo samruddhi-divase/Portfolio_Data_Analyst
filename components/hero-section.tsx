@@ -1,7 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import { Linkedin, Github } from "lucide-react"
+import { Linkedin, Github, Download } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 
 export function HeroSection() {
@@ -34,26 +35,35 @@ export function HeroSection() {
             Power BI, and Tableau.
           </p>
 
-          {/* Social ribbon */}
-          <div className="mt-8 flex items-center justify-center gap-4 lg:justify-start">
-            <a
-              href="https://linkedin.com/in/samruddhi-divase"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-card text-muted-foreground transition-all hover:border-primary hover:text-primary"
-              aria-label="LinkedIn profile"
-            >
-              <Linkedin className="h-5 w-5" />
-            </a>
-            <a
-              href="https://github.com/samruddhidivase"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-card text-muted-foreground transition-all hover:border-primary hover:text-primary"
-              aria-label="GitHub profile"
-            >
-              <Github className="h-5 w-5" />
-            </a>
+          {/* Actions */}
+          <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row lg:items-start lg:justify-start">
+            <Button asChild size="lg">
+              <a href="/Samruddhi-Divase-Resume.pdf" download>
+                <Download className="mr-2 h-4 w-4" />
+                Download Resume
+              </a>
+            </Button>
+
+            <div className="flex items-center gap-3">
+              <a
+                href="https://linkedin.com/in/samruddhi-divase"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-card text-muted-foreground transition-all hover:border-primary hover:text-primary"
+                aria-label="LinkedIn profile"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a
+                href="https://github.com/samruddhidivase"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-card text-muted-foreground transition-all hover:border-primary hover:text-primary"
+                aria-label="GitHub profile"
+              >
+                <Github className="h-5 w-5" />
+              </a>
+            </div>
           </div>
         </motion.div>
 

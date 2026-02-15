@@ -14,7 +14,7 @@ const projects = [
       "Automated KPI reporting for leadership reviews",
     ],
     tools: ["Python", "SQL", "Power BI"],
-    image: "https://images.unsplash.com/photo-1551288049-bbda38a5647e?w=800&h=450&fit=crop",
+    image: "/images/hr-analytics.jpg",
     github: "https://github.com/samruddhidivase",
     demo: "#",
   },
@@ -26,7 +26,7 @@ const projects = [
       "Built sales funnel and retention insights",
     ],
     tools: ["SQL", "Tableau", "Excel"],
-    image: "https://images.unsplash.com/photo-1551288049-bbda38a5647e?w=800&h=450&fit=crop",
+    image: "/images/ecommerce-analysis.jpg",
     github: "https://github.com/samruddhidivase",
     demo: "#",
   },
@@ -38,7 +38,7 @@ const projects = [
       "Generated actionable multi-dimensional analysis",
     ],
     tools: ["SQL", "Power BI", "DAX"],
-    image: "https://images.unsplash.com/photo-1551288049-bbda38a5647e?w=800&h=450&fit=crop",
+    image: "/images/adventure-works.jpg",
     github: "https://github.com/samruddhidivase",
     demo: "#",
   },
@@ -77,7 +77,7 @@ export function ProjectsSection() {
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-background/20" />
+
               </div>
 
               <div className="p-6">

@@ -18,9 +18,9 @@ const skills = [
   { name: "Power BI", icon: BarChart3, level: 88 },
   { name: "Tableau", icon: LineChart, level: 82 },
   { name: "Advanced Excel", icon: FileSpreadsheet, level: 92 },
-  { name: "R Programming", icon: FlaskConical, level: 75 },
+  { name: "R Programming", icon: FlaskConical, level: 70 },
   { name: "Data Cleaning", icon: Code2, level: 90 },
-  { name: "Statistics", icon: TrendingUp, level: 80 },
+  { name: "Statistics", icon: TrendingUp, level: 70 },
 ]
 
 export function SkillsSection() {
