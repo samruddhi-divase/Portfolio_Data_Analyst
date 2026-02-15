@@ -64,7 +64,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-source-code-pro)', 'monospace'],
+        display: ['var(--font-saira-stencil)', 'sans-serif'],
+        mono: ['monospace'],
       },
       borderRadius: {
         lg: 'var(--radius)',

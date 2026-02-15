@@ -1,29 +1,17 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Database, Code2, Lightbulb } from "lucide-react"
+import { Database, Award, Target } from "lucide-react"
 
 const metrics = [
-  {
-    icon: Database,
-    value: "50+",
-    label: "Datasets Analyzed",
-  },
-  {
-    icon: Code2,
-    value: "10k+",
-    label: "SQL Lines Written",
-  },
-  {
-    icon: Lightbulb,
-    value: "5+",
-    label: "Business Solutions",
-  },
+  { icon: Database, value: "20+", label: "Datasets Analyzed" },
+  { icon: Award, value: "SQL/Python", label: "Certified" },
+  { icon: Target, value: "100%", label: "Data Accuracy" },
 ]
 
 export function ImpactMetrics() {
   return (
-    <section className="border-y border-border bg-card px-6 py-10">
+    <section className="border-y border-border px-6 py-10">
       <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-8 sm:flex-row sm:gap-16">
         {metrics.map((metric, index) => (
           <motion.div
@@ -31,10 +19,10 @@ export function ImpactMetrics() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
-            className="flex items-center gap-4 text-center sm:text-left"
+            transition={{ duration: 0.4, delay: index * 0.12 }}
+            className="flex items-center gap-4 rounded-xl border border-border bg-card px-6 py-4"
           >
-            <div className="rounded-lg bg-accent p-2.5">
+            <div className="rounded-lg bg-primary/10 p-2.5">
               <metric.icon className="h-5 w-5 text-primary" />
             </div>
             <div>

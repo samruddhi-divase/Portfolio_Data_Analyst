@@ -29,11 +29,8 @@ export function AboutSection() {
     <section id="about" className="px-6 py-20">
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary">
+          <h2 className="font-display text-3xl text-primary sm:text-4xl">
             About Me
-          </p>
-          <h2 className="mt-2 text-3xl font-bold text-foreground sm:text-4xl">
-            Turning Data into Decisions
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
             I combine technical skills with business acumen to transform raw
@@ -48,13 +45,13 @@ export function AboutSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="group rounded-xl border border-border bg-card p-8 transition-all hover:border-primary/30 hover:shadow-md"
+              transition={{ duration: 0.4, delay: index * 0.12 }}
+              className="group rounded-xl border border-border bg-card p-8 transition-all hover:border-primary/40"
             >
-              <div className="mb-4 inline-flex rounded-lg bg-accent p-3">
+              <div className="mb-4 inline-flex rounded-lg bg-primary/10 p-3">
                 <item.icon className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="mb-2 text-lg font-semibold text-card-foreground">
+              <h3 className="mb-2 text-lg font-semibold text-foreground">
                 {item.title}
               </h3>
               <p className="text-sm leading-relaxed text-muted-foreground">

@@ -18,14 +18,11 @@ const education = [
 
 export function EducationSection() {
   return (
-    <section id="education" className="px-6 py-20">
+    <section id="education" className="bg-card/50 px-6 py-20">
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary">
-            Education & Credentials
-          </p>
-          <h2 className="mt-2 text-3xl font-bold text-foreground sm:text-4xl">
-            Academic Background
+          <h2 className="font-display text-3xl text-primary sm:text-4xl">
+            Education
           </h2>
         </div>
 
@@ -36,16 +33,16 @@ export function EducationSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="rounded-xl border border-border bg-card p-8 transition-all hover:border-primary/30 hover:shadow-md"
+              transition={{ duration: 0.4, delay: index * 0.12 }}
+              className="rounded-xl border border-border bg-card p-8 transition-all hover:border-primary/40"
             >
-              <div className="mb-4 inline-flex rounded-lg bg-accent p-3">
+              <div className="mb-4 inline-flex rounded-lg bg-primary/10 p-3">
                 <GraduationCap className="h-6 w-6 text-primary" />
               </div>
               <p className="text-xs font-semibold uppercase tracking-wider text-primary">
                 {item.type}
               </p>
-              <h3 className="mt-1 text-lg font-bold text-card-foreground">
+              <h3 className="mt-1 text-lg font-bold text-foreground">
                 {item.degree}
               </h3>
               <p className="mt-2 text-sm text-muted-foreground">
@@ -54,13 +51,12 @@ export function EducationSection() {
             </motion.div>
           ))}
 
-          {/* Certification card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-            className="rounded-xl border border-primary/20 bg-accent/50 p-8 transition-all hover:shadow-md"
+            transition={{ duration: 0.4, delay: 0.24 }}
+            className="rounded-xl border border-primary/30 bg-primary/5 p-8 transition-all hover:border-primary/50"
           >
             <div className="mb-4 inline-flex rounded-lg bg-primary/10 p-3">
               <Award className="h-6 w-6 text-primary" />
@@ -68,7 +64,7 @@ export function EducationSection() {
             <p className="text-xs font-semibold uppercase tracking-wider text-primary">
               Certification
             </p>
-            <h3 className="mt-1 text-lg font-bold text-card-foreground">
+            <h3 className="mt-1 text-lg font-bold text-foreground">
               Certified Data Analyst
             </h3>
             <p className="mt-2 text-sm text-muted-foreground">

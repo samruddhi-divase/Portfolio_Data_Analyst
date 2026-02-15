@@ -42,7 +42,7 @@ const contactInfo = [
     icon: Github,
     label: "GitHub",
     value: "github.com/samruddhidivase",
-    href: "https://github.com/samruddhidivase",
+    href: "https://github.com/samruddhi-divase",
   },
 ]
 
@@ -58,14 +58,11 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="bg-card px-6 py-20">
+    <section id="contact" className="px-6 py-20">
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary">
+          <h2 className="font-display text-3xl text-primary sm:text-4xl">
             Contact
-          </p>
-          <h2 className="mt-2 text-3xl font-bold text-foreground sm:text-4xl">
-            {"Let's Connect"}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
             Interested in working together or have questions? Feel free to reach
@@ -80,7 +77,7 @@ export function ContactSection() {
           transition={{ duration: 0.5 }}
           className="mx-auto grid max-w-4xl gap-10 lg:grid-cols-5"
         >
-          {/* Contact info */}
+          {/* Quick connect panel */}
           <div className="space-y-4 lg:col-span-2">
             {contactInfo.map((item) => (
               <a
@@ -88,9 +85,9 @@ export function ContactSection() {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-4 rounded-xl border border-border bg-background p-5 transition-all hover:border-primary/30 hover:shadow-md"
+                className="flex items-start gap-4 rounded-xl border border-border bg-card p-5 transition-all hover:border-primary/40"
               >
-                <div className="rounded-lg bg-accent p-2.5">
+                <div className="rounded-lg bg-primary/10 p-2.5">
                   <item.icon className="h-5 w-5 text-primary" />
                 </div>
                 <div className="min-w-0">
@@ -104,7 +101,6 @@ export function ContactSection() {
               </a>
             ))}
 
-            {/* Copy email button */}
             <Button
               variant="outline"
               className="w-full"
@@ -112,7 +108,7 @@ export function ContactSection() {
             >
               {copied ? (
                 <>
-                  <Check className="mr-2 h-4 w-4 text-emerald-600" />
+                  <Check className="mr-2 h-4 w-4 text-primary" />
                   Copied!
                 </>
               ) : (
@@ -127,7 +123,7 @@ export function ContactSection() {
           {/* Contact form */}
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="space-y-5 rounded-xl border border-border bg-background p-8 lg:col-span-3"
+            className="space-y-5 rounded-xl border border-border bg-card p-8 lg:col-span-3"
           >
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="space-y-2">

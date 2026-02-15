@@ -1,11 +1,13 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, BarChart3 } from "lucide-react"
+import { Menu, X } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const navLinks = [
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
-  { label: "Tech Stack", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ]
@@ -15,9 +17,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
+    const handleScroll = () => setScrolled(window.scrollY > 20)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
@@ -26,17 +26,13 @@ export function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-card/80 backdrop-blur-xl shadow-sm border-b border-border"
+          ? "border-b border-border bg-background/80 backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a
-          href="#hero"
-          className="flex items-center gap-2 text-lg font-bold text-foreground"
-        >
-          <BarChart3 className="h-5 w-5 text-primary" />
-          <span>SD</span>
+        <a href="#hero" className="font-display text-xl text-primary">
+          SD.
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
@@ -52,6 +48,12 @@ export function Navbar() {
           ))}
         </ul>
 
+        <div className="hidden md:block">
+          <Button asChild size="sm">
+            <a href="#contact">Hire Me</a>
+          </Button>
+        </div>
+
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="text-foreground md:hidden"
@@ -62,19 +64,26 @@ export function Navbar() {
       </nav>
 
       {isOpen && (
-        <div className="border-b border-border bg-card/95 backdrop-blur-xl md:hidden">
+        <div className="border-b border-border bg-background/95 backdrop-blur-xl md:hidden">
           <ul className="flex flex-col gap-1 px-6 py-4">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+                  className="block rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
                 >
                   {link.label}
                 </a>
               </li>
             ))}
+            <li className="mt-2">
+              <Button asChild size="sm" className="w-full">
+                <a href="#contact" onClick={() => setIsOpen(false)}>
+                  Hire Me
+                </a>
+              </Button>
+            </li>
           </ul>
         </div>
       )}

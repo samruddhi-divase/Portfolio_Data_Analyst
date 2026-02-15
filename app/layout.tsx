@@ -1,23 +1,22 @@
 import type { Metadata, Viewport } from "next"
-import { Inter, Source_Code_Pro } from "next/font/google"
+import { Inter, Saira_Stencil_One } from "next/font/google"
 import { Toaster } from "sonner"
 
 import "./globals.css"
 
 const _inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
-const _sourceCodePro = Source_Code_Pro({
+const _saira = Saira_Stencil_One({
+  weight: "400",
   subsets: ["latin"],
-  variable: "--font-source-code-pro",
+  variable: "--font-saira-stencil",
 })
 
 export const metadata: Metadata = {
-  title: "Samruddhi Divase | Data Architect & Insights Strategist",
+  title: "Samruddhi Divase | Junior Data Analyst",
   description:
-    "Data Architect & Insights Strategist turning raw data into high-impact business narratives. Skilled in SQL, Python, Power BI, Tableau, and Excel.",
+    "Junior Data Analyst automating ETL pipelines and building data-driven stories. Skilled in SQL, Python, Power BI, Tableau, and Excel.",
   keywords: [
     "Data Analyst",
-    "Data Architect",
-    "Insights Strategist",
     "SQL",
     "Python",
     "Power BI",
@@ -29,7 +28,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0e8585",
+  themeColor: "#0F172A",
   width: "device-width",
   initialScale: 1,
 }
@@ -43,7 +42,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className="font-sans antialiased">
         {children}
-        <Toaster position="bottom-center" richColors />
+        <Toaster position="bottom-center" richColors theme="dark" />
       </body>
     </html>
   )
