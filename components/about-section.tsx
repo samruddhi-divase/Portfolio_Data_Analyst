@@ -1,4 +1,7 @@
+"use client"
+
 import { GraduationCap, Briefcase, Target } from "lucide-react"
+import { motion } from "framer-motion"
 
 const highlights = [
   {
@@ -11,7 +14,7 @@ const highlights = [
     icon: Briefcase,
     title: "Internship Experience",
     description:
-      "Hands-on experience as a Data Analyst Intern, working with real-world datasets to derive actionable business insights.",
+      "Hands-on experience as a Data Analyst Intern at AI Variant, working with real-world datasets to derive actionable business insights.",
   },
   {
     icon: Target,
@@ -39,13 +42,17 @@ export function AboutSection() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
-          {highlights.map((item) => (
-            <div
+          {highlights.map((item, index) => (
+            <motion.div
               key={item.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
               className="group rounded-xl border border-border bg-card p-8 transition-all hover:border-primary/30 hover:shadow-md"
             >
               <div className="mb-4 inline-flex rounded-lg bg-accent p-3">
-                <item.icon className="h-6 w-6 text-accent-foreground" />
+                <item.icon className="h-6 w-6 text-primary" />
               </div>
               <h3 className="mb-2 text-lg font-semibold text-card-foreground">
                 {item.title}
@@ -53,7 +60,7 @@ export function AboutSection() {
               <p className="text-sm leading-relaxed text-muted-foreground">
                 {item.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

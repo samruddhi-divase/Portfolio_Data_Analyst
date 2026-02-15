@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next"
 import { Inter, Source_Code_Pro } from "next/font/google"
+import { Toaster } from "sonner"
 
 import "./globals.css"
 
@@ -10,11 +11,13 @@ const _sourceCodePro = Source_Code_Pro({
 })
 
 export const metadata: Metadata = {
-  title: "Samruddhi Divase | Data Analyst Portfolio",
+  title: "Samruddhi Divase | Data Architect & Insights Strategist",
   description:
-    "Certified Data Analyst with Master's degree in Computer Science. Skilled in SQL, Python, Power BI, Tableau, and Excel with a strong focus on data cleaning, modeling, and visualization.",
+    "Data Architect & Insights Strategist turning raw data into high-impact business narratives. Skilled in SQL, Python, Power BI, Tableau, and Excel.",
   keywords: [
     "Data Analyst",
+    "Data Architect",
+    "Insights Strategist",
     "SQL",
     "Python",
     "Power BI",
@@ -26,7 +29,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#2563eb",
+  themeColor: "#0e8585",
   width: "device-width",
   initialScale: 1,
 }
@@ -38,7 +41,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        {children}
+        <Toaster position="bottom-center" richColors />
+      </body>
     </html>
   )
 }

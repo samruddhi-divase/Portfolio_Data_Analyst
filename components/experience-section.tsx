@@ -1,4 +1,7 @@
+"use client"
+
 import { Building2, CalendarDays, CheckCircle2 } from "lucide-react"
+import { motion } from "framer-motion"
 
 const responsibilities = [
   "Cleaned and transformed HR and E-commerce datasets using SQL and Python",
@@ -10,7 +13,7 @@ const responsibilities = [
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="bg-card px-6 py-20">
+    <section id="experience" className="px-6 py-20">
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">
@@ -21,28 +24,35 @@ export function ExperienceSection() {
           </h2>
         </div>
 
-        <div className="mx-auto max-w-3xl">
-          <div className="relative rounded-xl border border-border bg-background p-8">
-            {/* Role header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-3xl"
+        >
+          <div className="relative rounded-xl border border-border bg-card p-8 shadow-sm">
             <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
               <div>
-                <h3 className="text-xl font-bold text-foreground">
+                <h3 className="text-xl font-bold text-card-foreground">
                   Data Analyst Intern
                 </h3>
-                <div className="mt-1 flex items-center gap-2 text-muted-foreground">
+                <a
+                  href="https://aivariant.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 flex items-center gap-2 text-primary transition-colors hover:text-primary/80"
+                >
                   <Building2 className="h-4 w-4" />
-                  <span className="text-sm font-medium">
-                    AI Variant, Pune
-                  </span>
-                </div>
+                  <span className="text-sm font-medium">AI Variant, Pune</span>
+                </a>
               </div>
-              <div className="flex items-center gap-2 rounded-full border border-border bg-accent px-4 py-1.5 text-sm font-medium text-accent-foreground">
+              <div className="flex items-center gap-2 rounded-full border border-border bg-muted px-4 py-1.5 text-sm font-medium text-muted-foreground">
                 <CalendarDays className="h-3.5 w-3.5" />
                 Feb 2025 &ndash; Nov 2025
               </div>
             </div>
 
-            {/* Responsibilities */}
             <ul className="space-y-3">
               {responsibilities.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
@@ -54,7 +64,7 @@ export function ExperienceSection() {
               ))}
             </ul>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )
