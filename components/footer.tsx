@@ -17,7 +17,7 @@ export function Footer() {
             <Linkedin className="h-4 w-4" />
           </a>
           <a
-            href="https://github.com/samruddhidivase"
+            href="https://github.com/samruddhi-divase"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground transition-colors hover:text-primary"
