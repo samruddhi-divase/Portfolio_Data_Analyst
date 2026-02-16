@@ -15,7 +15,7 @@ const projects = [
     ],
     tools: ["Python", "SQL", "Power BI"],
     image: "/images/hr-analytics.jpg",
-    github: "https://github.com/samruddhidivase",
+    github: "https://github.com/samruddhi-divase",
     demo: "#",
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     ],
     tools: ["SQL", "Tableau", "Excel"],
     image: "/images/ecommerce-analysis.jpg",
-    github: "https://github.com/samruddhidivase",
+    github: "https://github.com/samruddhi-divase",
     demo: "#",
   },
   {
@@ -39,7 +39,7 @@ const projects = [
     ],
     tools: ["SQL", "Power BI", "DAX"],
     image: "/images/adventure-works.jpg",
-    github: "https://github.com/samruddhidivase",
+    github: "https://github.com/samruddhi-divase",
     demo: "#",
   },
 ]
