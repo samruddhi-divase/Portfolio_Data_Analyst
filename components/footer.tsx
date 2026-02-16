@@ -26,7 +26,7 @@ export function Footer() {
             <Github className="h-4 w-4" />
           </a>
           <a
-            href="mailto:samruddhidivase28@email.com"
+            href="mailto:samruddhidivase28@gmail.com"
             className="text-muted-foreground transition-colors hover:text-primary"
             aria-label="Send email"
           >
