@@ -55,7 +55,7 @@ export function HeroSection() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://github.com/samruddhidivase"
+                href="https://github.com/samruddhi-divase"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-card text-muted-foreground transition-all hover:border-primary hover:text-primary"
