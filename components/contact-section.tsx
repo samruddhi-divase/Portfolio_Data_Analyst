@@ -17,7 +17,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { toast } from "sonner"
 import { motion } from "framer-motion"
 
-const EMAIL = "samruddhidivase28@email.com"
+const EMAIL = "samruddhidivase28@gmail.com"
 
 const contactInfo = [
   {
