@@ -4,9 +4,9 @@ import { motion } from "framer-motion"
 import { Database, Award, Target } from "lucide-react"
 
 const metrics = [
-  { icon: Database, value: "20+", label: "Datasets Analyzed" },
-  { icon: Award, value: "SQL/Python", label: "Certified" },
-  { icon: Target, value: "100%", label: "Data Accuracy" },
+  { icon: Database, value: "10+", label: "Datasets Analyzed" },
+  { icon: Award, value: "Data Analyst", label: "Certified" },
+  { icon: Target, value: "90%", label: "Data Accuracy" },
 ]
 
 export function ImpactMetrics() {
